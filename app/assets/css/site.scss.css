@@ -1,0 +1,5 @@
+@import "mixins";
+
+button {
+  @include border-radius(5px);
+}

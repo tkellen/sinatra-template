@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta charset='utf8'
+    title Layout
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    link rel='stylesheet' href="#{{asset_path("site.css")}}"
+    /[ if lt IE 9 ]
+      script src='//html5shiv.googlecode.com/svn/trunk/html5.js'
+  body
+    == yield
+
+    script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
+    script src="#{{asset_path("site.js")}}"
+    == yield_content :js

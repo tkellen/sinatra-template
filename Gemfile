@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'sass'
+gem 'compass'
+gem 'sprockets'
+gem 'sprockets-helpers'
+gem 'sprockets-sass'
+gem 'coffee-script'
+gem 'slim'
