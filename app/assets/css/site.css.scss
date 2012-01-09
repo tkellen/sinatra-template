@@ -1,4 +1,6 @@
+// = require typography.css
 @import "mixins";
+@import "settings";
 
 button {
   @include border-radius(5px);
