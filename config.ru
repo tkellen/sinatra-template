@@ -1,12 +1,11 @@
-require File.dirname(__FILE__)+'/config/env.rb'
-require File.dirname(__FILE__)+'/app/app'
+require File.expand_path(File.dirname(__FILE__) + '/lib/template')
 
 map '/assets' do
   environment = Sprockets::Environment.new
   environment.css_compressor = Crush::Sass::Engine
   environment.js_compressor = Crush::Uglifier
-  environment.append_path 'app/assets/js'
-  environment.append_path 'app/assets/css'
+  environment.append_path 'lib/template/assets/js'
+  environment.append_path 'lib/template/assets/css'
  
   Sprockets::Helpers.configure do |config|
     config.environment = environment
@@ -18,6 +17,7 @@ map '/assets' do
 end
 
 map '/' do
-  run Main
+  run Template::App
 end
 
+DB.disconnect

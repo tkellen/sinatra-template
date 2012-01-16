@@ -1,3 +1,3 @@
 task :console do
-  sh "irb -r ./config/env.rb"
+  sh "irb -r ./lib/template.rb"
 end

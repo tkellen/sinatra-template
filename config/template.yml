@@ -1,0 +1,5 @@
+db:
+  adapter: postgres
+  database: database
+  user: user
+  password:

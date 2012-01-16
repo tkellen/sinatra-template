@@ -1,3 +1,3 @@
 # sinatra template
 
-My starting point for sinatra projects.
+My starting point for large sinatra projects.
