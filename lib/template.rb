@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/contrib'
 require 'pg'
 require 'sequel'
@@ -13,19 +13,13 @@ require 'slim'
 require 'crush'
 require 'uglifier'
 
+# prepare constants
 CONFIG = YAML::load(File.open('config/template.yml'))
 DB = Sequel.connect(CONFIG['db'])
 
+# load app
+require 'template/helpers/helper'
+require 'template/classes/class'
+require 'template/models/model'
 require 'template/app'
-
-# load all helpers
-Dir.glob('template/helpers/*.rb').each { |file| require file }
-
-# load all classes
-Dir.glob(File.dirname(__FILE__)+'/template/classes/*.rb') { |file| require file }
-
-# load all models
-Dir.glob(File.dirname(__FILE__)+'/template/models/*.rb') { |file| require file }
-
-# load all controllers
-Dir.glob(File.dirname(__FILE__)+'/template/controllers/*.rb').each { |file| require file }
+require 'template/controllers/main'

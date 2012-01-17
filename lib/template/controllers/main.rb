@@ -5,9 +5,5 @@ module Template
       slim :index
     end
 
-    get '/config' do
-      CONFIG
-    end
-
   end
 end

@@ -1,5 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/lib/template')
 
+use Rack::Session::Cookie
+
 map '/assets' do
   environment = Sprockets::Environment.new
   environment.css_compressor = Crush::Sass::Engine
