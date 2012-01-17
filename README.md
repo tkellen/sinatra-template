@@ -2,11 +2,11 @@
 
 This repository contains my preferred full-stack Ruby toolkit, configured and ready to roll in a well-organized structure.
 
-__Framework:__ Sinatra (http://sinatrarb.com/)
-__Templating:__ Slim (http://slim-lang.com/)
-__Asset Pipeline:__ Sprockets (https://github.com/sstephenson/sprockets)
-__ORM:__ Sequel (http://sequel.rubyforge.org/)
-__Database:__ PostgreSQL/Agnostic (http://postgresql.org/)
+* __Framework:__ Sinatra (http://sinatrarb.com/)
+* __Templating:__ Slim (http://slim-lang.com/)
+* __Asset Pipeline:__ Sprockets (https://github.com/sstephenson/sprockets)
+* __ORM:__ Sequel (http://sequel.rubyforge.org/)
+* __Database:__ PostgreSQL/Agnostic (http://postgresql.org/)
 
 
 ```
