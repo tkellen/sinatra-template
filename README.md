@@ -27,6 +27,7 @@ This repository contains my preferred full-stack Ruby toolkit, configured and re
 |-----app.rb       -- sinatra config goes here
 |---template.rb    -- rename to app.rb and require all dependencies / configs here
 |-public           -- static files go here
+|-spec             -- tests go here
 |-tasks            -- rake tasks go here
 |---console.rb     -- load irb with access to models/routes etc
 |-config.ru        -- configure asset pipline and load app
