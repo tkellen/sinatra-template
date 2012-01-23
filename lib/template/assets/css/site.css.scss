@@ -1,7 +1,2 @@
-// = require typography.css
-@import "mixins";
+// = require reset.css
 @import "settings";
-
-button {
-  @include border-radius(5px);
-}
