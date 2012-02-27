@@ -5,17 +5,11 @@ require 'sinatra/base'
 require 'sinatra/flash'
 require 'sinatra/contrib'
 require 'sinatra/content_for'
+require 'sinatra/namespace'
 require 'pg'
 require 'sequel'
-require 'compass'
-require 'sprockets'
-require 'sprockets-helpers'
-require 'sprockets-sass'
 require 'sass'
 require 'slim'
-require 'crush'
-require 'uglifier'
-require 'coffee-script'
 
 # prepare constants
 CONFIG = YAML::load(File.open('config/template.yml'))

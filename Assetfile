@@ -1,0 +1,34 @@
+require 'rake-pipeline-web-filters'
+require 'compass'
+require 'uglifier'
+
+# set output path
+output "public"
+
+# define input files root
+input "lib/template/assets" do
+
+  # convert sass
+  match "css/site.scss" do
+    scss :additional_load_paths => "lib/template/assets/css"
+  end
+
+  # convert coffeescript
+  match "js/**/*.coffee" do
+    coffee_script
+  end
+
+  # concat and minify javascript, including jquery first
+  match "*.js" do
+    concat ['js/vendor/jquery-1.7.1.js'], "site.js"
+    uglify
+  end
+
+  # minify css
+  match "*.css" do
+    copy "site.css"
+    yui_css
+  end
+
+end
+
