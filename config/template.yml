@@ -1,3 +1,5 @@
+version: "1"
+
 db:
   adapter: postgres
   database: database

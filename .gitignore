@@ -1,6 +1,6 @@
 .sass-cache
 .DS_Store
 Gemfile.lock
-public/*.css
-public/*.js
+public/assets
 tmp
+log

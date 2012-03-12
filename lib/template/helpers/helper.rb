@@ -1,6 +1,6 @@
 module Template
   module Helpers
-    
+
     ##
     #
     # Render a partial template using slim
@@ -28,5 +28,18 @@ module Template
       end
     end
 
-  end 
+    ##
+    #
+    # Generate a cache-busted URL for assets.
+    #
+    # @param [String] url
+    #   URL to asset.
+    # @return [String]
+    #   URL to asset with cachebusting string added.
+    #
+    def asset_path(url)
+      "/assets/#{settings.cachebust}/#{url}"
+    end
+
+  end
 end

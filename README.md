@@ -2,6 +2,7 @@
 
 This repository contains my preferred full-stack Ruby toolkit, configured and ready to roll in a well-organized structure.
 
+* __Webserver:__ Thin (https://github.com/macournoyer/thin)
 * __Framework:__ Sinatra (http://sinatrarb.com/)
 * __Templating:__ Slim (http://slim-lang.com/)
 * __Asset Pipeline:__ Rake-Pipeline (https://github.com/livingsocial/rake-pipeline)
@@ -31,12 +32,12 @@ This repository contains my preferred full-stack Ruby toolkit, configured and re
 |-spec             -- tests go here
 |-tasks            -- rake tasks go here
 |---console.rb     -- load irb with access to models/routes etc
-|-config.ru        -- configure asset pipline and load app
+|-config.ru        -- rackup file
 ```
 
 ## Notes
 
-The rake-pipeline middleware only runs during development.  Assets must be precompiled in production.
+The rake-pipeline middleware only runs automatically during development.  Assets must be precompiled in production with `rakep build`.
 
 
 ## Thanks

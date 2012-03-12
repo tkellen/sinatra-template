@@ -4,13 +4,12 @@ module Template
     configure do
       set :root, File.dirname(__FILE__)
       set :public_folder, settings.root+'/../../public'
-      register Sinatra::Flash
+      set :cachebust, Digest::SHA1.hexdigest(CONFIG['version'])
 
+      register Sinatra::Flash
       helpers Sinatra::ContentFor
       helpers Sinatra::Namespace
       helpers Template::Helpers
-
-      use Rack::Session::Cookie
     end
 
     # use rake-pipline middleware during development

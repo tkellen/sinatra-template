@@ -3,7 +3,7 @@ require 'compass'
 require 'uglifier'
 
 # set output path
-output "public"
+output "public/assets"
 
 # define input files root
 input "lib/template/assets" do
