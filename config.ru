@@ -1,4 +1,4 @@
-require File.dirname(__FILE__)+'/lib/template'
+require File.expand_path(File.dirname(__FILE__) + '/lib/template')
 
 # enable cookies
 use Rack::Session::Cookie
