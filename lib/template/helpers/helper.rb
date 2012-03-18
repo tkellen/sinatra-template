@@ -38,7 +38,7 @@ module Template
     #   URL to asset with cachebusting string added.
     #
     def asset_path(url)
-      "/assets/#{settings.cachebust}/#{url}"
+      "/assets/cb#{settings.cachebust}/#{url}"
     end
 
   end
