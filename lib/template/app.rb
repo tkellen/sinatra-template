@@ -6,6 +6,10 @@ module Template
       set :public_folder, settings.root+'/../../public'
       set :cachebust, Digest::SHA1.hexdigest(CONFIG['version'])
 
+      # compile assets at startup
+      system('bundle exec rakep clean');
+      system('bundle exec rakep build');
+
       register Sinatra::Flash
       helpers Sinatra::ContentFor
       helpers Sinatra::Namespace
