@@ -37,8 +37,7 @@ This repository contains my preferred full-stack Ruby toolkit, configured and re
 
 ## Notes
 
-The rake-pipeline middleware only runs automatically during development.  Assets must be precompiled in production with `rakep build`.
-
+Rake-pipeline's rack middleware only runs automatically during development.  Assets will automatically compile at startup, but they will not dynamically recompile in production (they are cache-busted based on a hash of the version number in the project's config file).
 
 ## Thanks
 All the creators and contributors of the awesome tools this framework is built on.
